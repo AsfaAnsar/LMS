@@ -1,25 +1,25 @@
 package library.system;
 
 public class Book {
-    // Attributes (Private - as per UML)
+
     private String bookID;
     private String title;
     private String author;
     private String publisher;
     private String category;
-    private String status; // "Available" or "Borrowed"
+    private String status;
 
-    // Constructor
+
     public Book(String bookID, String title, String author, String publisher, String category) {
         this.bookID = bookID;
         this.title = title;
         this.author = author;
         this.publisher = publisher;
         this.category = category;
-        this.status = "Available"; // New books are always available
+        this.status = "Available";
     }
 
-    // Methods (Public - as per UML)
+
     public boolean checkAvailability() {
         return this.status.equals("Available");
     }
@@ -28,7 +28,7 @@ public class Book {
         this.status = newStatus;
     }
 
-    // Getters and Setters
+
     public String getBookID() {
         return bookID;
     }
