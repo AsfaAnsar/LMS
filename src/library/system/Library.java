@@ -1,4 +1,5 @@
 package library.system;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,6 +30,13 @@ public class Library {
 
     public void searchBook(String title) {
         System.out.println("Searching for: " + title);
+        for (Book b : books) {
+            if (b.getTitle().equalsIgnoreCase(title)) {
+                System.out.println("Found: " + b.getTitle() + " - Status: " + b.getStatus());
+                return;
+            }
+        }
+        System.out.println("Book not found in system.");
     }
 
     public String getName() {
