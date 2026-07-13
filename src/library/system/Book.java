@@ -17,17 +17,17 @@ public class Book {
         this.status = status;
     }
 
-    // Method from Class Diagram
+
     public boolean checkAvailability() {
         return this.status.equalsIgnoreCase("Available");
     }
 
-    // Helper method needed for Activity Diagram ("Update book status")
+
     public void updateStatus(String newStatus) {
         this.status = newStatus;
     }
 
-    // Getters
+
     public String getBookID() { return bookID; }
     public String getTitle() { return title; }
     public String getStatus() { return status; }
